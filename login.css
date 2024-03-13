@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+}
+body::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/header-image.jpg);
+    background-position: center;
+}
+nav{
+    position: fixed;
+    z-index: 1;
+    padding: 25px 60px
+}
+nav a img{
+    width: 160px;
+}
+.form-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 430px;
+    padding: 60px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%)
+}
+.form-container h2{
+    color: #fff;
+    font-size: 2rem;
+}
+.form-container form {
+    margin: 25px 0 65px;
+}
+form .form-control{
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+.form-control input{
+    height: 100%;
+    width: 100%;
+    background: #333;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+.form-control label{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+}
+.form-control input:is(:focus, :valid) ~ label{
+    font-size: .7rem;
+    transform: translateY(-130%);
+}
+form button{
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #db0001;
+    margin: 25px 0 10px;
+    transition: 0.1s ease;
+}
+form button:hover{
+    background-color: #660c0c;
+}
+form .help{
+    display: flex;
+    justify-content: space-between;
+}
+form .remember{
+    display: flex;
+}
+form .remember input{
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+.form-container :where(label, p, small, a){
+    color: #b3b3b3;
+}
+.form-container p a{
+    color: #fff;
+}
+.form-container small{
+    display: block;
+    margin-top: 15px;
+}
+.form-container small a{
+    color: #0071eb;
+}
+.form-container a{
+    text-decoration: none;
+}
+.form-container a:hover{
+    text-decoration: underline;
+}
